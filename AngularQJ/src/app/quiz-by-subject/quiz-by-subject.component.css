@@ -1,0 +1,27 @@
+.quiz-config-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
+
+.config-button {
+  font-size: 35px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 7px;
+}
+
+.config-button:hover {
+  background-color: #bbbbbb;
+  cursor: pointer;
+}
+
+.config-button:active {
+  box-shadow: 0 4px;
+  transform: translateY(4px);
+}
+
+.config-icon {
+
+}

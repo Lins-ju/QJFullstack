@@ -1,0 +1,37 @@
+<div class="quiz-outer-box">
+  <div class="quiz-box">
+    <div class="quiz-info-box">
+
+      <h3 class="quiz-title">{{ quizSubject }}</h3>
+      <h3 class="quiz-question-text">{{ currentIndex + 1 }}.{{ questionText }}</h3>
+
+      <div class="quiz-answers">
+        <div *ngFor="let answer of answers" class="answer" (click)="selectAnswer(answer)"
+             [class.disable-answer]="isAnswerConfirmed">
+          <div class="answer-dot" [class.selected-dot]="isAnswerSelected(answer)"></div>
+          {{ answer }}
+        </div>
+      </div>
+    </div>
+    <div class="answer-status">
+      <div class="fade-in" *ngIf="answerStatus === 'correct'">
+        Correct Answer!
+      </div>
+
+      <div class="fade-in" *ngIf="answerStatus === 'incorrect'">
+        Wrong Answer!
+        <div>
+        The correct answer is:
+        {{ this.correctAnswer }}
+        </div>
+      </div>
+    </div>
+    <div class="quiz-buttons">
+      <button (click)="isAnswerCorrect()" class="default-button">Confirm</button>
+      <button *ngIf="!isQuizDone()" (click)="nextObject()" class="default-button">Next</button>
+      <button *ngIf="isQuizDone()" (click)="goToResults()" class="default-button">See Results!</button>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="quiz-results-box">
+  <div class="quiz-results-info">
+    <div class="quiz-ratio-result">{{ correctAnswersCount }} / {{ quizSize }}</div>
+    <div *ngIf="correctToQuizSizeRation() === 0" class="results-text">Yikes...</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.1 && correctToQuizSizeRation() <= 0.3" class="results-text">Try using your brain next time bruh...</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.3 && correctToQuizSizeRation() <= 0.5" class="results-text">Could be better!</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.3 && correctToQuizSizeRation() <= 0.5" class="results-text">Average, better than nothing!</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.5 && correctToQuizSizeRation() <= 0.7" class="results-text">Smart?? that's an understatement!</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.7 && correctToQuizSizeRation() <= 0.9" class="results-text">Unbelievable! Almost perfect!</div>
+    <div *ngIf="correctToQuizSizeRation() > 0.9 && correctToQuizSizeRation() <= 1" class="results-text">That's why he's the GOAT!! THE GOAT!!!</div>
+
+    <button class="back-to-menu-button" routerLink="/">Back to menu</button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu-button {
+  text-align: center;
+  background-color: gold;
+  font-size: 35px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  border: 1px goldenrod;
+  box-shadow: 0 9px #999;
+  transition: 200ms;
+}
+
+.menu-button:hover {
+  background-color: goldenrod;
+  cursor: pointer;
+}
+
+.menu-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.fade-out {
+
+}
